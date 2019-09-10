@@ -1,0 +1,113 @@
+.parent1 {
+    margin-bottom: 10px;
+    background-color: yellow;
+    height: 80px;
+    /*居中*/
+    display: flex;
+    /*水平*/
+    justify-content: center;
+    /*垂直*/
+    align-items: center;
+}
+.child1 {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 60%;
+}
+
+.parent2 {
+    margin-bottom: 10px;
+    background-color: yellow;
+    height: 80px;
+    /*居中*/
+    position: relative;
+}
+
+.child2 {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 60%;
+    /*居中*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent3 {
+    margin-bottom: 10px;
+    background-color: yellow;
+    height: 80px;
+    /*居中*/
+    display: grid;
+}
+
+.child3 {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 60%;
+    /*居中*/
+    justify-self: center;
+    align-self: center;
+}
+
+.parent4 {
+    margin-bottom: 10px;
+    background-color: yellow;
+    height: 80px;
+    /*居中*/
+    font-size: 0;
+    text-align: center;
+}
+
+.parent4:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.child4 {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 60%;
+    /*居中*/
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.parent5 {
+    margin-bottom: 10px;
+    background-color: yellow;
+    height: 80px;
+    /*居中*/
+    display: flex;
+}
+
+.child5 {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 60%;
+    /*居中*/
+    margin: auto;
+}
+
+.parent6 {
+    margin-bottom: 10px;
+    background-color: yellow;
+    height: 80px;
+}
+
+/*没有实现垂直居中*/
+.child6 {
+    background-color: antiquewhite;
+    height: 50px;
+    width: 60%;
+    /*居中*/
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+}
