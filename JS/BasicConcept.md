@@ -5,4 +5,14 @@
 ```
 let myObject = preferredObject || backupObject
 ```
-- 
+- map语法
+```bash
+let new_array = arr.map(function callback(currentvalue[, index[, array]]) {
+  
+}[, thisArg])
+```
+- 参数：
+    - callback
+    - index
+    - array
+    - thisArg

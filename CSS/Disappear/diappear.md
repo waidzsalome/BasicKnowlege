@@ -1,0 +1,23 @@
+- display: none （不占空间，不能点击）（场景，显示出原来这里不存在的结构）
+- visibility: hidden (占据空间，不能点击) （场景：显示不会导致页面结构发生变动，不会撑开）
+- opacity: 0 (占据空间，可以点击) （场景：可以跟transition搭配）
+- opacity:0和display:none;父节点应用了则其子孙元素无论如何也不会显示
+- 父节点 visibility: hidden 隐藏，子孙元素:visibility:visible 显示;
+- 设置fixed 并设置足够大的负距离，可使元素隐藏
+- 用层叠关系 z-index 把原素叠在最底层使其隐藏
+- text-indent: -9999px 使其文字隐藏
+- 其他隐藏元素的方法
+    - transform: scale(0)
+# 分类
+- 占位
+
+    - visibility: hiddden;
+    - margin-left: -100%;
+    - opacity: 0;
+    - transform: scale(0)
+- 不占位
+    - display: none;
+    - width: 0;height:0;overflow: hidden;
+- 仅对块内文本元素
+    - text-indent: -9999px
+    - font-size: 0;
