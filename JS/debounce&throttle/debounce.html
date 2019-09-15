@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link>
+</head>
+<body>
+<div id="content1" style="height:150px;line-height:150px;text-align:center; color: #fff;background-color:#ccc;font-size:80px;">debounceOne</div>
+<div id="content2" style="height:150px;line-height:150px;text-align:center; color: #fff;background-color:blueviolet;font-size:80px;">debounceOne</div>
+<script src="debounce&throttle.js"></script>
+<script>
+    let num = [1,1,1];
+    let contentOne = document.getElementById('content1');
+    let contentTwo = document.getElementById('content2');
+
+    function countOne() {
+        contentOne.innerHTML = num[0]++;
+
+        console.log(num)
+    }
+
+    function countTwo() {
+        contentTwo.innerHTML = num[1]++;
+    }
+
+    contentOne.onmousemove = debounceOne(countOne,1000);
+    contentTwo.onmousemove = debounceTwo(countTwo, 1000);
+</script>
+</body>
+</html>
