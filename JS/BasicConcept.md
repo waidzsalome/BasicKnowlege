@@ -2,11 +2,11 @@
     - 无符号右移会把负数的二进制码当成正数的二进制码
 - 同时使用逻辑非操作符（！），实际上会模拟Boolean()转型函数的行为
 - 利用逻辑或避免为变量赋null或undefined
-```
+```JS
 let myObject = preferredObject || backupObject
 ```
 - map语法
-```bash
+```JS
 let new_array = arr.map(function callback(currentvalue[, index[, array]]) {
   
 }[, thisArg])
