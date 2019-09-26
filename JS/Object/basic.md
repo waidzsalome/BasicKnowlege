@@ -1,0 +1,11 @@
+- apply 
+    - func.apply(thisArg, [argsArray]);
+    - thisArg
+    - argsArray
+    - 调用有指定this值和参数的参数的结果
+
+- call
+    - fun.call(thisArg, arg1, arg2, ...)
+    - thisArg 在fun函数运行时指定都额this值。
+    - arg1, arg2,...指定的参数列表
+    - 使用调用者提供的this值和参数调用该函数的返回值。
