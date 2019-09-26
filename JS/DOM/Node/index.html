@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+<body>
+<div id="test">
+    <div></div>
+    <ul id="ul" lang="en">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+</div>
+
+<script>
+    let myDiv = document.getElementById("test").attributes.getNamedItem("id");
+    console.log(myDiv);
+    // document.getElementById("test").attributes.getNamedItem("id").nodeValue = "someOtherId";
+    let myList = document.getElementById("ul");
+    let deepList = myList.cloneNode(true);
+    console.log(deepList);
+    let shallowList = myList.cloneNode(false);
+    console.log(shallowList);
+
+
+
+    outputAttributes = (element) => {
+        let paris = [],attrName, attrValue, i, len;
+        for (i= 0, len = element.attributes.length; i < len ;i++) {
+            attrName = element.attributes[i].nodeName;
+            attrValue = element.attributes[i].nodeValue;
+            if (element.attributes[i].specified) {
+                paris.push(attrName + "=\"" + attrValue + "\"")
+            }
+        }
+        return paris.join(" ")
+    };
+    console.log(outputAttributes(myList));
+
+    let div = document.createElement("div");
+    div.id = "myNewDiv";
+    div.className = "box";
+    document.body.appendChild(div);
+
+    document.getElementById("test").firstChild.nodeValue = "some other message";
+</script>
+</body>
+</html>
